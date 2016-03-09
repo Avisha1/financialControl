@@ -1,0 +1,145 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!-- GENERAL -->
+    <string name="cancel">ביטול</string>
+    <string name="empty"></string>
+    <string name="income">הכנסות</string>
+    <string name="expense">הוצאות</string>
+    <string name="all">כל הרשומות</string>
+
+    <!-- AddEntry -->
+    <string name="amount">סכום</string>
+    <string name="date">תאריך</string>
+    <string name="pick_acccount">בחר חשבון</string>
+    <string name="pay_method">אמצעי תשלום</string>
+    <string name="payments">תשלומים</string>
+    <string name="num_payments">מספר תשלומים</string>
+    <string name="notes">הערות</string>
+    <string name="save">שמור</string>
+    <string name="entry_saved">הפעולה נשמרה בהצלחה</string>
+    <string name="changes_will_not_save">השינויים לא יישמרו</string>
+	<string name="type_of_transaction">סוג עסקה</string>
+    <string name="debit">הוראת קבע</string>
+    <string name="pick_payment">בחר אמצעי תשלום</string>
+    <string name="notes_hint">הכנס הערה</string>
+    <string name="enter_amount">הכנס סכום</string>
+    <string name="wrong_payments">מספר תשלומים לא חוקי</string>
+
+    <!-- Dialogs -->
+    <string name="no_entries">אין תנועות ל</string>
+    <string name="account_delete">מחק חשבון</string>
+    <string name="payment_delete">מחק אמצעי תשלום</string>
+    <string name="delete_non_empty_account">קיימות תנועות המקושרות לחשבון זה, האם ברצונך להמשיך?</string>
+    <string name="delete_non_empty_payment">קיימות תנועות המקושרות לאמצעי תשלום זה, האם ברצונך להמשיך?</string>
+    <string name="delete_empty_account">האם למחוק חשבון זה?</string>
+    <string name="delete_empty_payment">האם למחוק אמצעי תשלום זה?</string>
+    <string name="account_successfully_deleted">החשבון נמחק בהצלחה</string>
+    <string name="payment_successfully_deleted">אמצעי התשלום נמחק בהצלחה</string>
+    <string name="delete">מחק</string>
+
+    <!-- Activity Titles -->
+    <string name="title_activity_app">App</string>
+    <string name="title_activity_add_entry">הוספת פעולה בחשבון</string>
+    <string name="title_activity_account_list">רשימת חשבונות</string>
+    <string name="title_activity_entries">הצגת פעולות בחשבון</string>
+    <string name="title_activity_settings">הגדרות</string>
+    <string name="title_activity_accounts_fragments">AccountsFragments</string>
+    <string name="title_activity_accounts_tab">רשימת חשבונות</string>
+    <string name="title_activity_filter_entries">סינון פעולות</string>
+    <string name="title_activity_payments">אמצעי תשלום</string>
+    <!--  -->
+
+    <string name="app_name">ניהול חשבונות</string>
+    <string name="action_settings">הגדרות</string>
+    <string name="add_an_account">הוסף חשבון</string>
+    <string name="add_payment">הוסף אמצעי תשלום</string>
+    <string name="add_entry">הוסף רשומה</string>
+    <string name="action_options">Options</string>
+    <!-- <string name="action_show_all">הראה הכל</string> -->
+    <string name="entry_type">בחר סוג חשבון</string>
+    <string name="all_entries">הוצאות/הכנסות</string>
+    <string name="acc_entries">כל הפעולות</string>
+    <string name="account">חשבון</string>
+    <string name="type">סוג</string>
+    <string name="proceed">המשך</string>
+    <string name="sum">סך הכל </string>
+    <string name="action_add">הוסף</string>
+    <string name="action_edit">ערוך</string>
+    <string name="banner_ad_unit_id">ca-app-pub-4070573464600294/9237463965</string>
+    <!-- <string name="delete_account">מחק חשבון?</string> -->
+    <string name="detail">פרוט</string>
+    <string name="add">הוסף</string>
+    <string name="confirm_delete">מחק תנועה?</string>
+    <!-- <string name="delete_and_continue">קיימות תנועות מקושרות לחשבון זה, האם ברצונך להמשיך?</string> -->
+    <string name="acc_item_type">סוג חשבון</string>
+    <string name="leaving_app_title">עוזבים את האפליקציה :(</string>
+    <string name="leaving_app_message">בטוחים?</string>
+    <string name="exit">יציאה</string>
+    <string name="goodbye">תודה ולהתראות</string>
+    <string name="last_account">אי אפשר למחוק את כל החשבונות</string>
+    <string name="pick_type">בחר סוג פעולה</string>
+    <string name="all_types">כל הסוגים</string>
+    <string name="pick_dates">בחר טווח תאריכים</string>
+    <string name="start_date">התחלה</string>
+    <string name="end_date">סיום</string>
+    <string name="clear_filter">נקה שדות</string>
+    <string name="clear">נקה</string>
+    <string name="filter_entries">סנן פעולות</string>
+    <string name="sorting">מיין רשומות לפי</string>
+    <string name="billing_date">תאריך חיוב</string>
+    <string name="filter_year">תנועות לשנה</string>
+    <string name="filter_month">תנועות לחודש</string>
+    <string name="filter_week">תנועות השבוע</string>
+    <string name="filter_day">תנועות היום</string>
+    <string name="filter_payday">מועד חיוב</string>
+    <string name="filter_dates">תנועות בין תאריכים</string>
+    <string name="accounts">חשבונות</string>
+
+    <string-array name="default_pay_methods">
+        <item>מזומן</item>
+        <item>כרטיס אשראי</item>
+        <item>צק</item>
+    </string-array>
+    <string-array name="default_accounts_expense">
+        <item>שכר דירה</item>
+        <item>חשמל</item>
+        <item>ארנונה</item>
+        <item>מים</item>
+        <item>טלפון</item>
+        <item>כבלים</item>
+        <item>אינטרנט</item>
+        <item>גז</item>
+        <item>קניות</item>
+    </string-array>
+    <string-array name="default_accounts_income">
+        <item>משכורת</item>
+        <item>מלגה</item>
+    </string-array>
+    <string-array name="sort_entry_by_choice">
+        <item>ללא</item>
+        <item>שנה</item>
+        <item>חודש</item>
+        <item>שבוע</item>
+        <item>היום</item>
+        <item>מועד חיוב</item>
+        <item>טווח תאריכים</item>
+    </string-array>
+    <string-array name="sort_entry_by_choice_values">
+        <item>-1</item>
+        <item>365</item>
+        <item>30</item>
+        <item>7</item>
+        <item>1</item>
+        <item>2</item>
+        <item>100</item>
+    </string-array>
+    <string-array name="pay_date_entries_values">
+        <item>1</item>
+        <item>2</item>
+        <item>5</item>
+        <item>10</item>
+        <item>15</item>
+    </string-array>
+
+</resources>

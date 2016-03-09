@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main"
+    android:padding="10dp" >
+
+    <Button
+        android:id="@+id/mp_add_btn"
+        android:layout_width="150dp"
+        android:layout_height="80dp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corners_blue"
+        android:onClick="AddEntryBtn"
+        android:text="@string/add_entry" />
+
+    <LinearLayout
+        android:id="@+id/mp_btns_layout"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_below="@+id/mp_add_btn"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2.1" >
+
+        <Button
+            android:id="@+id/mp_payments_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/rounded_corners_blue"
+            android:onClick="ShowPayMethodsBtn"
+            android:text="@string/pay_method" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.1" />
+
+        <Button
+            android:id="@+id/mp_accounts_btn"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            android:background="@drawable/rounded_corners_blue"
+            android:onClick="ShowAccountsBtn"
+            android:text="@string/accounts" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/mp_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mp_btns_layout"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_corners"
+        android:text="Filter"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <LinearLayout
+        android:id="@+id/mp_sum_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/mp_title"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal"
+        android:weightSum="2.2" >
+
+        <include
+            android:id="@+id/mp_income"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            layout="@layout/total_layout" />
+
+        <Space
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.2" />
+
+        <include
+            android:id="@+id/mp_expense"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1.0"
+            layout="@layout/total_layout" />
+    </LinearLayout>
+
+</RelativeLayout><!-- From: file:/C:/Users/avishai/AndroidStudioProjects/financialControl/app/src/main/res/layout-fr/activity_main_page.xml -->

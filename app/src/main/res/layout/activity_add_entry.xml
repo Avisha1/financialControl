@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/ae_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main"
+    android:padding="10dp" >
+
+    <TextView
+        android:id="@+id/ae_tv_ammount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginEnd="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/amount"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/ae_et_ammount"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ae_tv_ammount"
+        android:layout_alignBottom="@+id/ae_tv_ammount"
+        android:layout_toLeftOf="@+id/ae_tv_ammount"
+        android:layout_toStartOf="@id/ae_tv_ammount"
+        android:background="@drawable/rounded_corners"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="numberDecimal"
+        android:nextFocusDown="@+id/ae_tv_date_choice"
+        android:textAppearance="?android:attr/textAppearanceLarge" >
+
+        <requestFocus />
+    </EditText>
+
+    <TextView
+        android:id="@+id/ae_tv_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_below="@+id/ae_et_ammount"
+        android:layout_marginTop="33dp"
+        android:text="@string/date"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ae_tv_account"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ae_tv_date"
+        android:layout_alignRight="@+id/ae_tv_date"
+        android:layout_below="@+id/ae_tv_date"
+        android:layout_marginTop="24dp"
+        android:text="@string/account"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ae_tv_payment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ae_tv_account"
+        android:layout_alignRight="@+id/ae_tv_account"
+        android:layout_below="@+id/ae_tv_account"
+        android:layout_marginTop="24dp"
+        android:text="@string/pay_method"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ae_tv_payType"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ae_tv_payment"
+        android:layout_alignRight="@+id/ae_tv_payment"
+        android:layout_below="@+id/ae_tv_payment"
+        android:layout_marginTop="18dp"
+        android:text="@string/type_of_transaction"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <RadioGroup
+        android:id="@+id/ae_rg_transaction"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ae_tv_payType"
+        android:layout_alignRight="@+id/ae_tv_ammount"
+        android:layout_alignTop="@+id/ae_tv_payType"
+        android:orientation="horizontal" >
+
+        <RadioButton
+            android:id="@+id/ae_rb_payments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:checked="true"
+            android:text="@string/payments" />
+
+        <RadioButton
+            android:id="@+id/ae_rb_debit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/debit" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/ae_tv_numPayment"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ae_tv_payType"
+        android:layout_alignRight="@+id/ae_tv_payType"
+        android:layout_below="@+id/ae_rg_transaction"
+        android:layout_marginTop="18dp"
+        android:text="@string/num_payments"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ae_tv_notes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ae_tv_numPayment"
+        android:layout_alignRight="@+id/ae_tv_numPayment"
+        android:layout_below="@+id/ae_tv_numPayment"
+        android:layout_marginTop="10dp"
+        android:text="@string/notes"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ae_tv_date_choice"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ae_tv_date"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_corners"
+        android:gravity="center"
+        android:minHeight="30dp"
+        android:nextFocusDown="@+id/ae_tv_account_choice"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ae_tv_account_choice"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/ae_tv_date_choice"
+        android:layout_alignStart="@+id/ae_tv_date_choice"
+        android:layout_alignTop="@+id/ae_tv_account"
+        android:background="@drawable/rounded_corners"
+        android:gravity="center"
+        android:hint="@string/pick_acccount"
+        android:minHeight="30dp"
+        android:nextFocusDown="@+id/ae_tv_payment_choice"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <TextView
+        android:id="@+id/ae_tv_payment_choice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/ae_tv_payType"
+        android:layout_alignBaseline="@+id/ae_tv_payment"
+        android:layout_toLeftOf="@+id/ae_tv_payment"
+        android:layout_toStartOf="@+id/ae_tv_payment"
+        android:background="@drawable/rounded_corners"
+        android:gravity="center"
+        android:hint="@string/pick_payment"
+        android:minHeight="30dp"
+        android:nextFocusDown="@+id/ae_et_numPayment"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/ae_et_notes"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ae_tv_notes"
+        android:layout_alignRight="@+id/ae_tv_notes"
+        android:layout_below="@+id/ae_tv_notes"
+        android:layout_marginTop="11dp"
+        android:background="@drawable/rounded_corners"
+        android:ems="10"
+        android:hint="@string/notes_hint"
+        android:inputType="textMultiLine"
+        android:lines="2"
+        android:minHeight="60dp"
+        android:nextFocusDown="@+id/ae_btn_save" />
+
+    <EditText
+        android:id="@+id/ae_et_numPayment"
+        android:layout_width="100dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/ae_tv_numPayment"
+        android:layout_toLeftOf="@+id/ae_tv_numPayment"
+        android:layout_toStartOf="@+id/ae_tv_numPayment"
+        android:background="@drawable/rounded_corners"
+        android:ems="10"
+        android:gravity="center"
+        android:inputType="number"
+        android:minHeight="30dp"
+        android:nextFocusDown="@+id/ae_et_notes"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <Button
+        android:id="@+id/ae_btn_cancel"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignEnd="@+id/ae_et_notes"
+        android:layout_alignParentBottom="true"
+        android:layout_alignRight="@+id/ae_et_notes"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/rounded_corners_blue"
+        android:onClick="cancelEntryBtn"
+        android:text="@string/cancel" />
+
+    <Button
+        android:id="@+id/ae_btn_save"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/ae_btn_cancel"
+        android:layout_alignBottom="@+id/ae_btn_cancel"
+        android:layout_alignLeft="@+id/ae_et_notes"
+        android:layout_alignStart="@+id/ae_et_notes"
+        android:background="@drawable/rounded_corners_blue"
+        android:onClick="saveInfoBtn"
+        android:text="@string/save" />
+
+</RelativeLayout>

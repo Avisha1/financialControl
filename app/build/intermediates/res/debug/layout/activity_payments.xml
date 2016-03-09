@@ -1,0 +1,17 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/back_main"
+    android:padding="10dp"
+    tools:context="com.financialcontrol.activity.PaymentsActivity" >
+
+    <ListView
+        android:id="@+id/paymentsListview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:divider="@color/transparent"
+        android:dividerHeight="15dp" >
+    </ListView>
+
+</RelativeLayout><!-- From: file:/C:/Users/avishai/AndroidStudioProjects/financialControl/app/src/main/res/layout/activity_payments.xml -->

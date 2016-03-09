@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/rounded_corners_gray_back" >
+
+    <RelativeLayout
+        android:id="@+id/se_inner_layout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:gravity="center_horizontal"
+        android:padding="10dp" >
+
+        <TextView
+            android:id="@+id/se_ammount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:text="@string/amount" />
+
+        <Space
+            android:id="@+id/se_space2"
+            android:layout_width="75dp"
+            android:layout_height="wrap_content"
+            android:layout_toEndOf="@+id/se_ammount"
+            android:layout_toRightOf="@+id/se_ammount" />
+
+        <TextView
+            android:id="@+id/se_ammount_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/se_ammount"
+            android:layout_toEndOf="@+id/se_space2"
+            android:layout_toRightOf="@+id/se_space2"
+            android:text="@string/amount" />
+
+        <TextView
+            android:id="@+id/fe_date_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/se_ammount"
+            android:layout_alignStart="@+id/se_ammount"
+            android:layout_below="@+id/se_ammount"
+            android:text="@string/date" />
+
+        <TextView
+            android:id="@+id/fe_date_tv_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/fe_date_tv"
+            android:layout_alignBottom="@+id/fe_date_tv"
+            android:layout_alignLeft="@+id/se_ammount_input"
+            android:layout_alignStart="@+id/se_ammount_input"
+            android:text="@string/date" />
+
+        <TextView
+            android:id="@+id/fe_account_tv"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fe_date_tv"
+            android:layout_alignStart="@+id/fe_date_tv"
+            android:layout_below="@+id/fe_date_tv"
+            android:text="@string/account" />
+
+        <TextView
+            android:id="@+id/fe_account_tv_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/fe_account_tv"
+            android:layout_alignBottom="@+id/fe_account_tv"
+            android:layout_alignLeft="@+id/fe_date_tv_input"
+            android:layout_alignStart="@+id/fe_date_tv_input"
+            android:text="@string/account" />
+
+        <TextView
+            android:id="@+id/se_pay_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fe_account_tv"
+            android:layout_alignStart="@+id/fe_account_tv"
+            android:layout_below="@+id/fe_account_tv"
+            android:text="@string/pay_method" />
+
+        <TextView
+            android:id="@+id/se_pay_type_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/fe_account_tv_input"
+            android:layout_alignStart="@+id/fe_account_tv_input"
+            android:layout_below="@+id/fe_account_tv_input"
+            android:text="@string/pay_method" />
+
+        <TextView
+            android:id="@+id/se_payments"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/se_pay_type"
+            android:layout_alignStart="@+id/se_pay_type"
+            android:layout_below="@+id/se_pay_type"
+            android:text="@string/payments" />
+
+        <TextView
+            android:id="@+id/se_payments_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/se_pay_type_input"
+            android:layout_alignStart="@+id/se_pay_type_input"
+            android:layout_below="@+id/se_pay_type_input"
+            android:text="@string/payments" />
+
+        <TextView
+            android:id="@+id/se_notes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/se_payments"
+            android:layout_alignStart="@+id/se_payments"
+            android:layout_below="@+id/se_payments"
+            android:text="@string/notes" />
+
+        <TextView
+            android:id="@+id/se_notes_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/se_payments_input"
+            android:layout_alignStart="@+id/se_payments_input"
+            android:layout_below="@+id/se_payments_input"
+            android:text="@string/notes" />
+
+        <TextView
+            android:id="@+id/se_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/se_notes"
+            android:layout_alignStart="@+id/se_notes"
+            android:layout_below="@+id/se_notes_input"
+            android:text="@string/type" />
+
+        <TextView
+            android:id="@+id/se_type_input"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@+id/se_notes_input"
+            android:layout_alignStart="@+id/se_notes_input"
+            android:layout_below="@+id/se_notes_input"
+            android:text="@string/type" />
+    </RelativeLayout>
+
+</RelativeLayout>
