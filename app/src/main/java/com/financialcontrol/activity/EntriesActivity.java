@@ -1,6 +1,23 @@
 package com.financialcontrol.activity;
 
-import java.util.ArrayList;
+import android.app.AlertDialog;
+import android.app.Dialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.graphics.drawable.ColorDrawable;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.ContextThemeWrapper;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.view.Window;
+import android.widget.AdapterView;
+import android.widget.AdapterView.OnItemClickListener;
+import android.widget.AdapterView.OnItemLongClickListener;
+import android.widget.ListView;
+import android.widget.TextView;
 
 import com.financialcontrol.R;
 import com.financialcontrol.data.AppData;
@@ -14,27 +31,10 @@ import com.financialcontrol.utils.AppUtils;
 import com.financialcontrol.utils.DBUtils;
 import com.financialcontrol.utils.DateUtils;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import android.graphics.drawable.ColorDrawable;
-import android.os.Bundle;
-import android.view.ContextThemeWrapper;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.view.Window;
-import android.widget.AdapterView;
-import android.widget.AdapterView.OnItemClickListener;
-import android.widget.AdapterView.OnItemLongClickListener;
-import android.widget.ListView;
-import android.widget.TextView;
+import java.util.ArrayList;
 
 
-public class EntriesActivity extends Activity implements OnItemClickListener, OnItemLongClickListener {
+public class EntriesActivity extends AppCompatActivity implements OnItemClickListener, OnItemLongClickListener {
 
 	ListView lstViewEntry;
 	EntryAdapter adapter;

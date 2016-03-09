@@ -1,20 +1,13 @@
 package com.financialcontrol.activity;
 
 
-import com.financialcontrol.R;
-import com.financialcontrol.data.AppData.AccountType;
-import com.financialcontrol.dataObjects.PreferenceParams;
-import com.financialcontrol.utils.AppUtils;
-import com.financialcontrol.utils.AppConsts;
-import com.financialcontrol.utils.DBUtils;
-
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -24,7 +17,14 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
-public class MainPageActivity extends Activity {
+import com.financialcontrol.R;
+import com.financialcontrol.data.AppData.AccountType;
+import com.financialcontrol.dataObjects.PreferenceParams;
+import com.financialcontrol.utils.AppConsts;
+import com.financialcontrol.utils.AppUtils;
+import com.financialcontrol.utils.DBUtils;
+
+public class MainPageActivity extends AppCompatActivity {
 
 	Button incomeDetails,expenseDetails;
 	TextView filterTitle,incomeTV,expenseTV,incomeSumTV,expenseSumTV;

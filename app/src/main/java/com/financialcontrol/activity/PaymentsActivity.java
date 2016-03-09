@@ -1,26 +1,14 @@
 package com.financialcontrol.activity;
 
-import java.util.ArrayList;
-
-import com.financialcontrol.R;
-import com.financialcontrol.data.AppData;
-import com.financialcontrol.data.AppData.AccountType;
-import com.financialcontrol.dataObjects.Payment;
-import com.financialcontrol.dataObjects.PreferenceParams;
-import com.financialcontrol.dataObjectsAdapters.PaymentAdapter;
-import com.financialcontrol.utils.AppUtils;
-import com.financialcontrol.utils.DBUtils;
-
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
 import android.content.DialogInterface;
-import android.content.Intent;
-import android.content.SharedPreferences;
 import android.content.DialogInterface.OnClickListener;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -32,7 +20,16 @@ import android.widget.LinearLayout;
 import android.widget.ListView;
 import android.widget.Toast;
 
-public class PaymentsActivity extends Activity implements OnItemClickListener, OnItemLongClickListener {
+import com.financialcontrol.R;
+import com.financialcontrol.dataObjects.Payment;
+import com.financialcontrol.dataObjects.PreferenceParams;
+import com.financialcontrol.dataObjectsAdapters.PaymentAdapter;
+import com.financialcontrol.utils.AppUtils;
+import com.financialcontrol.utils.DBUtils;
+
+import java.util.ArrayList;
+
+public class PaymentsActivity extends AppCompatActivity implements OnItemClickListener, OnItemLongClickListener {
 
 	private ListView listView;
 	private ArrayList<Payment>list;

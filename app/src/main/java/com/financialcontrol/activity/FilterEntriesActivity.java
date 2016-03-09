@@ -1,7 +1,18 @@
 package com.financialcontrol.activity;
 
-import java.util.ArrayList;
-import java.util.Date;
+import android.app.AlertDialog;
+import android.content.DialogInterface;
+import android.content.DialogInterface.OnClickListener;
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.Button;
+import android.widget.RadioGroup;
+import android.widget.RadioGroup.OnCheckedChangeListener;
 
 import com.financialcontrol.R;
 import com.financialcontrol.data.AppData;
@@ -14,21 +25,10 @@ import com.financialcontrol.utils.DBUtils;
 import com.financialcontrol.utils.DateUtils;
 import com.financialcontrol.utils.DateUtils.FormatString;
 
-import android.app.Activity;
-import android.app.AlertDialog;
-import android.content.DialogInterface;
-import android.content.DialogInterface.OnClickListener;
-import android.content.Intent;
-import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
-import android.view.View;
-import android.widget.ArrayAdapter;
-import android.widget.Button;
-import android.widget.RadioGroup;
-import android.widget.RadioGroup.OnCheckedChangeListener;
+import java.util.ArrayList;
+import java.util.Date;
 
-public class FilterEntriesActivity extends Activity implements GetChosenDateListener {
+public class FilterEntriesActivity extends AppCompatActivity implements GetChosenDateListener {
 
 	private enum DialogMode{
 		ACCOUNTS,PAYMENTS

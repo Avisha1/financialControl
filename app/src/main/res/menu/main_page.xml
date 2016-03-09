@@ -1,25 +1,14 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.example.financialcontrol.MainPage" >
+    tools:context="com.example.financialcontrol.MainPage">
+
 
     <item
-        android:id="@+id/extend_menu"
-        android:orderInCategory="100"
-        android:showAsAction="always"
-        android:title="@string/empty"
-        android:icon="@drawable/ic_action_overflow">
-        <menu>
-            <!--  <item
-                android:id="@+id/action_show_all"
-                android:showAsAction="ifRoom"
-                android:title="@string/action_show_all">
-            </item>-->
-            <item
-                android:id="@+id/action_settings"
-                android:showAsAction="ifRoom"
-                android:title="@string/action_settings">
-            </item>
-        </menu>
+        android:id="@+id/action_settings"
+        android:title="@string/action_settings"
+        app:showAsAction="never">
+
     </item>
 
 </menu>

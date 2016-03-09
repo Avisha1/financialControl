@@ -1,26 +1,12 @@
 package com.financialcontrol.activity;
 
-import java.util.ArrayList;
-import java.util.Date;
-
-import com.financialcontrol.R;
-import com.financialcontrol.data.AppData;
-import com.financialcontrol.data.AppData.AccountType;
-import com.financialcontrol.dataObjects.Payment;
-import com.financialcontrol.dataObjectsAdapters.DatePickerDialogFragment;
-import com.financialcontrol.dataObjectsAdapters.DatePickerDialogFragment.GetChosenDateListener;
-import com.financialcontrol.utils.AppUtils;
-import com.financialcontrol.utils.DBUtils;
-import com.financialcontrol.utils.DateUtils;
-import com.financialcontrol.utils.DateUtils.FormatString;
-
-import android.os.Bundle;
 import android.app.ActionBar;
-import android.app.Activity;
 import android.app.AlertDialog;
 import android.content.DialogInterface;
 import android.content.DialogInterface.OnClickListener;
 import android.content.Intent;
+import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnTouchListener;
@@ -33,9 +19,23 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.financialcontrol.R;
+import com.financialcontrol.data.AppData;
+import com.financialcontrol.data.AppData.AccountType;
+import com.financialcontrol.dataObjects.Payment;
+import com.financialcontrol.dataObjectsAdapters.DatePickerDialogFragment;
+import com.financialcontrol.dataObjectsAdapters.DatePickerDialogFragment.GetChosenDateListener;
+import com.financialcontrol.utils.AppUtils;
+import com.financialcontrol.utils.DBUtils;
+import com.financialcontrol.utils.DateUtils;
+import com.financialcontrol.utils.DateUtils.FormatString;
+
+import java.util.ArrayList;
+import java.util.Date;
 
 
-public class AddingEntryActivity extends Activity implements GetChosenDateListener {
+
+public class AddingEntryActivity extends AppCompatActivity implements GetChosenDateListener {
 
 	// Widgets
 	ActionBar actionBar;
