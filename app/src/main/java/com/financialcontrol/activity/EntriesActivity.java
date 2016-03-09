@@ -296,7 +296,7 @@ public class EntriesActivity extends AppCompatActivity implements OnItemClickLis
 	@Override
 	public void onItemClick(AdapterView<?> parent, View view, int position, long id) {
 
-		ContextThemeWrapper ctw = new ContextThemeWrapper( context, R.style.CustomDialogTheme );
+		ContextThemeWrapper ctw = new ContextThemeWrapper( context, android.R.style.Theme_Holo_Light_Dialog );
 		final Dialog AboutDialog = new Dialog(ctw);
 
 		AboutDialog.requestWindowFeature(Window.FEATURE_NO_TITLE);
