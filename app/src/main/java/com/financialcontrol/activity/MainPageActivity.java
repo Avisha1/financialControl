@@ -8,20 +8,22 @@ import android.content.SharedPreferences;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
+import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
-import android.widget.Button;
 import android.widget.RelativeLayout;
+import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
 
 import com.financialcontrol.R;
 import com.financialcontrol.data.AppData.AccountType;
 import com.financialcontrol.dataObjects.PreferenceParams;
+import com.financialcontrol.dataObjectsAdapters.ToolbarSpinnerAdapter;
 import com.financialcontrol.utils.AppConsts;
 import com.financialcontrol.utils.AppUtils;
 import com.financialcontrol.utils.DBUtils;
@@ -39,10 +41,12 @@ import com.mikepenz.materialdrawer.DrawerBuilder;
 import com.mikepenz.materialdrawer.model.PrimaryDrawerItem;
 
 import java.util.ArrayList;
+import java.util.Arrays;
+import java.util.List;
 
 public class MainPageActivity extends AppCompatActivity {
 
-    Button incomeDetails, expenseDetails;
+    View incomeDetails, expenseDetails;
     TextView filterTitle, incomeTV, expenseTV, incomeSumTV, expenseSumTV;
     RelativeLayout incomeRL, expenseRL;
     PreferenceParams settings;
@@ -56,8 +60,20 @@ public class MainPageActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main_page);
         toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        addDrawer();
+        setSpinner();
+        //addDrawer();
         initialize();
+    }
+
+    private void setSpinner() {
+
+        getSupportActionBar().setTitle("");
+        String[] myResArray = getResources().getStringArray(R.array.sort_entry_by_choice);
+        List<String> myResArrayList = Arrays.asList(myResArray);
+        ToolbarSpinnerAdapter spinnerAdapter = new ToolbarSpinnerAdapter(this, myResArrayList);
+        Spinner spinner = (Spinner) findViewById(R.id.toolbar_spinner);
+        spinner.setAdapter(spinnerAdapter);
+
     }
 
     private void addDrawer() {
@@ -84,9 +100,9 @@ public class MainPageActivity extends AppCompatActivity {
         View incomeView = findViewById(R.id.mp_income);
         incomeTV = (TextView) incomeView.findViewById(R.id.tl_title);
         incomeTV.setText(getResources().getString(R.string.income));
-        incomeTV.setTextColor(getResources().getColor(R.color.green));
+        incomeTV.setTextColor(ContextCompat.getColor(this, R.color.green));
         incomeSumTV = (TextView) incomeView.findViewById(R.id.tl_sum);
-        incomeDetails = (Button) incomeView.findViewById(R.id.tl_expand_btn);
+        incomeDetails = incomeView.findViewById(R.id.main_card);
         incomeDetails.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -99,9 +115,9 @@ public class MainPageActivity extends AppCompatActivity {
         View expenseView = findViewById(R.id.mp_expense);
         expenseTV = (TextView) expenseView.findViewById(R.id.tl_title);
         expenseTV.setText(getResources().getString(R.string.expense));
-        expenseTV.setTextColor(getResources().getColor(R.color.red));
+        expenseTV.setTextColor(ContextCompat.getColor(this, R.color.red));
         expenseSumTV = (TextView) expenseView.findViewById(R.id.tl_sum);
-        expenseDetails = (Button) expenseView.findViewById(R.id.tl_expand_btn);
+        expenseDetails = expenseView.findViewById(R.id.main_card);
         expenseDetails.setOnClickListener(new OnClickListener() {
 
             @Override
@@ -144,14 +160,14 @@ public class MainPageActivity extends AppCompatActivity {
         labels.add(getString(R.string.expense));
 
         int[] colors = new int[2];
-        colors[0] = Color.GREEN;
-        colors[1] = Color.RED;
+        colors[0] = ContextCompat.getColor(this, R.color.green);
+        colors[1] = ContextCompat.getColor(this, R.color.red);
         PieDataSet dataset = new PieDataSet(entries, "");
         dataset.setColors(colors);
         PieData data = new PieData(labels, dataset);
         data.setValueFormatter(new PercentFormatter());
         data.setValueTextSize(14f);
-        data.setValueTextColor(Color.BLACK);
+        data.setValueTextColor(Color.WHITE);
 
         pieChart.setDescription("");
         pieChart.getLegend().setEnabled(false);
@@ -232,4 +248,5 @@ public class MainPageActivity extends AppCompatActivity {
             alertDialog.show();
         }
     }
+
 }

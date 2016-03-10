@@ -14,62 +14,108 @@
         android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
         app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
 
+        <Spinner
+            android:id="@+id/toolbar_spinner"
+            style="@style/Widget.MyApp.HeaderBar.Spinner"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:theme="@style/ThemeOverlay.AppCompat.Light" />
+
     </android.support.v7.widget.Toolbar>
 
-    <com.github.mikephil.charting.charts.PieChart
-        android:id="@+id/pieChart"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_margin="12dp">
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
 
-    </com.github.mikephil.charting.charts.PieChart>
+        <com.github.mikephil.charting.charts.PieChart
+            android:id="@+id/pieChart"
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:layout_margin="12dp">
+
+        </com.github.mikephil.charting.charts.PieChart>
+
+    </android.support.v7.widget.CardView>
 
     <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:background="@drawable/back_main"
-        android:padding="10dp">
-
-        <Button
-            android:id="@+id/mp_add_btn"
-            android:layout_width="150dp"
-            android:layout_height="80dp"
-            android:layout_centerHorizontal="true"
-            android:background="@drawable/rounded_corners_blue"
-            android:onClick="AddEntryBtn"
-            android:text="@string/add_entry" />
+        android:padding="16dp">
 
         <LinearLayout
             android:id="@+id/mp_btns_layout"
             android:layout_width="match_parent"
-            android:layout_height="60dp"
-            android:layout_below="@+id/mp_add_btn"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:weightSum="2.1">
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
 
-            <Button
+            <android.support.v7.widget.CardView
                 android:id="@+id/mp_payments_btn"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="120dp"
                 android:layout_weight="1.0"
-                android:background="@drawable/rounded_corners_blue"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:onClick="ShowPayMethodsBtn"
-                android:text="@string/pay_method" />
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
 
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.1" />
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/pay_method"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
 
-            <Button
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
                 android:id="@+id/mp_accounts_btn"
                 android:layout_width="0dp"
-                android:layout_height="match_parent"
+                android:layout_height="120dp"
                 android:layout_weight="1.0"
-                android:background="@drawable/rounded_corners_blue"
+                android:clickable="true"
+                android:foreground="?android:attr/selectableItemBackground"
                 android:onClick="ShowAccountsBtn"
-                android:text="@string/accounts" />
+                app:cardElevation="2dp"
+                app:cardUseCompatPadding="true">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:text="@string/accounts"
+                    android:textAppearance="?android:attr/textAppearanceLarge" />
+
+            </android.support.v7.widget.CardView>
+
+            <!--            <Button
+                            android:id="@+id/mp_payments_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/rounded_corners_blue"
+                            android:onClick="ShowPayMethodsBtn"
+                            android:text="@string/pay_method" />-->
+
+            <!--            <Space
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="0.1" />-->
+
+            <!--            <Button
+                            android:id="@+id/mp_accounts_btn"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1.0"
+                            android:background="@drawable/rounded_corners_blue"
+                            android:onClick="ShowAccountsBtn"
+                            android:text="@string/accounts" />-->
+
         </LinearLayout>
 
         <TextView
@@ -79,38 +125,45 @@
             android:layout_below="@+id/mp_btns_layout"
             android:layout_centerHorizontal="true"
             android:layout_marginTop="40dp"
-            android:background="@drawable/rounded_corners"
             android:text="Filter"
             android:textAppearance="?android:attr/textAppearanceLarge" />
 
-        <LinearLayout
-            android:id="@+id/mp_sum_layout"
+        <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@+id/mp_title"
-            android:layout_marginTop="10dp"
-            android:orientation="horizontal"
-            android:weightSum="2.2">
+            android:layout_below="@+id/mp_title">
 
-            <include
-                android:id="@+id/mp_income"
-                layout="@layout/total_layout"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.0" />
+            <android.support.design.widget.FloatingActionButton
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:onClick="AddEntryBtn"
+                android:src="@drawable/ic_add_white_24dp" />
 
-            <Space
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="0.2" />
+            <LinearLayout
+                android:id="@+id/mp_sum_layout"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginTop="10dp"
+                android:orientation="horizontal">
 
-            <include
-                android:id="@+id/mp_expense"
-                layout="@layout/total_layout"
-                android:layout_width="0dp"
-                android:layout_height="match_parent"
-                android:layout_weight="1.0" />
-        </LinearLayout>
+                <include
+                    android:id="@+id/mp_income"
+                    layout="@layout/total_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0" />
+
+                <include
+                    android:id="@+id/mp_expense"
+                    layout="@layout/total_layout"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1.0" />
+
+            </LinearLayout>
+
+        </RelativeLayout>
 
     </RelativeLayout>
 

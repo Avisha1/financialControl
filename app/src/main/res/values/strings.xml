@@ -68,7 +68,7 @@
     <string name="action_edit">ערוך</string>
     <string name="banner_ad_unit_id">ca-app-pub-4070573464600294/9237463965</string>
     <!-- <string name="delete_account">מחק חשבון?</string> -->
-    <string name="detail">פרוט</string>
+    <string name="detail">לחץ להצגת פירוט</string>
     <string name="add">הוסף</string>
     <string name="confirm_delete">מחק תנועה?</string>
     <!-- <string name="delete_and_continue">קיימות תנועות מקושרות לחשבון זה, האם ברצונך להמשיך?</string> -->

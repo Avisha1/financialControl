@@ -1,34 +1,53 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="wrap_content"
-    android:layout_height="wrap_content"
-    android:background="@drawable/rounded_corners"
-    android:padding="10dp" >
 
-    <TextView
-        android:id="@+id/tl_title"
-        android:layout_width="wrap_content"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <android.support.v7.widget.CardView
+        android:id="@+id/main_card"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Title"
-        android:textAppearance="?android:attr/textAppearanceLarge" />
+        android:clickable="true"
+        android:foreground="?android:attr/selectableItemBackground"
+        app:cardElevation="2dp"
+        app:cardUseCompatPadding="true">
 
-    <TextView
-        android:id="@+id/tl_sum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tl_title"
-        android:layout_centerHorizontal="true"
-        android:text="Ammount"
-        android:textAppearance="?android:attr/textAppearanceMedium" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="10dp">
 
-    <Button
-        android:id="@+id/tl_expand_btn"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/tl_sum"
-        android:layout_centerHorizontal="true"
-        android:background="@drawable/rounded_corners_gray_back"
-        android:text="@string/detail" />
+            <TextView
+                android:id="@+id/tl_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Title"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
 
-</RelativeLayout>
+            <TextView
+                android:id="@+id/tl_sum"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tl_title"
+                android:layout_centerHorizontal="true"
+                android:text="Ammount"
+                android:textAppearance="?android:attr/textAppearanceMedium" />
+
+            <Button
+                android:id="@+id/tl_expand_btn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/tl_sum"
+                android:layout_centerHorizontal="true"
+                android:background="@drawable/rounded_corners_gray_back"
+                android:clickable="false"
+                android:text="@string/detail" />
+
+        </RelativeLayout>
+
+    </android.support.v7.widget.CardView>
+
+</FrameLayout>

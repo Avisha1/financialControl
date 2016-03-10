@@ -1,17 +1,27 @@
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:background="@drawable/back_main"
-    android:padding="10dp"
-    tools:context="com.financialcontrol.activity.PaymentsActivity" >
+    android:orientation="vertical"
+    tools:context="com.financialcontrol.activity.PaymentsActivity">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?android:attr/actionBarSize"
+        android:background="@color/colorPrimary"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light">
+
+    </android.support.v7.widget.Toolbar>
 
     <ListView
         android:id="@+id/paymentsListview"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:divider="@color/transparent"
-        android:dividerHeight="15dp" >
-    </ListView>
+        android:layout_margin="12dp"
+        android:divider="@color/transparent"></ListView>
 
-</RelativeLayout>
+</LinearLayout>

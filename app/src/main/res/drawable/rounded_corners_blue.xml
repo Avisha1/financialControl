@@ -3,18 +3,18 @@
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:shape="rectangle">
  
-    <!-- view background color -->
+<!--    &lt;!&ndash; view background color &ndash;&gt;
     <solid
         android:color="#FFFFFF" >
     </solid>
  
-    <!-- view border color and width -->
+    &lt;!&ndash; view border color and width &ndash;&gt;
     <stroke
         android:width="3dp"
         android:color="#0000FF" >
     </stroke>
  
-    <!-- If you want to add some padding -->
+    &lt;!&ndash; If you want to add some padding &ndash;&gt;
     <padding
         android:left="4dp"
         android:top="4dp"
@@ -22,9 +22,9 @@
         android:bottom="4dp"    >
     </padding>
  
-    <!-- Here is the corner radius -->
+    &lt;!&ndash; Here is the corner radius &ndash;&gt;
     <corners
         android:radius="10dp"   >
-    </corners>
+    </corners>-->
  
 </shape>

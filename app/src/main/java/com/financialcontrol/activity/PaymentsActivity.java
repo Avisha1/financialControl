@@ -9,6 +9,7 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
@@ -35,11 +36,15 @@ public class PaymentsActivity extends AppCompatActivity implements OnItemClickLi
 	private ArrayList<Payment>list;
 	public PaymentAdapter adapter;
 	private PreferenceParams settings;
+    private Toolbar toolbar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_payments);
+        toolbar = (Toolbar) findViewById(R.id.toolbar);
+        setSupportActionBar(toolbar);
+
 		listView = (ListView) findViewById(R.id.paymentsListview);
 		list = DBUtils.getPaymentMethods(this);
 

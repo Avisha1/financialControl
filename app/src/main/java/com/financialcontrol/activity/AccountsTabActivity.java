@@ -7,7 +7,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v4.view.ViewPager.SimpleOnPageChangeListener;
 import android.support.v7.app.ActionBar;
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
@@ -27,7 +26,6 @@ public class AccountsTabActivity extends AppCompatActivity implements AddNewAcco
 	ActionBar.Tab incomeTab, expenseTab;
 	AccountFragment incomeFragment;
 	AccountFragment expenseFragment;
-	Toolbar toolbar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -95,7 +93,7 @@ public class AccountsTabActivity extends AppCompatActivity implements AddNewAcco
 		actionBar.addTab(incomeTab);
 		actionBar.addTab(expenseTab);
 
-		//		initialiseTabs();		
+		//		initialiseTabs();
 
 	}
 	/*

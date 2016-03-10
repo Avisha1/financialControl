@@ -25,5 +25,6 @@
     <color name="colorPrimaryLight">#bbdefb</color>
     <color name="textPrimary">#212121</color>
     <color name="textSecondary">#727272</color>
+    <color name="windowBackground">#EEEEEE</color>
 
 </resources>
