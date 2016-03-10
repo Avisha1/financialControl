@@ -1,35 +1,33 @@
 package com.financialcontrol.activity;
 
+import android.content.Intent;
+import android.os.Bundle;
+import android.support.v4.app.FragmentManager;
+import android.support.v4.view.ViewPager;
+import android.support.v4.view.ViewPager.SimpleOnPageChangeListener;
+import android.support.v7.app.ActionBar;
+import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
+import android.view.Menu;
+import android.view.MenuItem;
+
 import com.financialcontrol.R;
 import com.financialcontrol.activity.AccountFragment.OnItemChosenListener;
 import com.financialcontrol.data.AppData;
 import com.financialcontrol.data.AppData.AccountType;
 import com.financialcontrol.dataObjects.Account;
 import com.financialcontrol.dataObjectsAdapters.AccountDialogFragment;
-import com.financialcontrol.dataObjectsAdapters.ViewPagerAdapter;
 import com.financialcontrol.dataObjectsAdapters.AccountDialogFragment.AddNewAccountListener;
+import com.financialcontrol.dataObjectsAdapters.ViewPagerAdapter;
 
-import android.app.ActionBar;
-import android.app.Activity;
-import android.app.FragmentTransaction;
-import android.app.ActionBar.Tab;
-import android.app.ActionBar.TabListener;
-import android.content.Intent;
-import android.os.Bundle;
-import android.support.v4.app.FragmentActivity;
-import android.support.v4.app.FragmentManager;
-import android.support.v4.view.ViewPager;
-import android.support.v4.view.ViewPager.SimpleOnPageChangeListener;
-import android.view.Menu;
-import android.view.MenuItem;
-
-public class AccountsTabActivity extends FragmentActivity implements AddNewAccountListener, OnItemChosenListener{
+public class AccountsTabActivity extends AppCompatActivity implements AddNewAccountListener, OnItemChosenListener{
 
 	ActionBar actionBar;
 	ViewPager viewPager;
-	Tab incomeTab, expenseTab;
+	ActionBar.Tab incomeTab, expenseTab;
 	AccountFragment incomeFragment;
 	AccountFragment expenseFragment;
+	Toolbar toolbar;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -41,11 +39,11 @@ public class AccountsTabActivity extends FragmentActivity implements AddNewAccou
 		if (bundle != null)
 			isFromMainPage = bundle.getBoolean("IsFromMainPage");
 
-		incomeFragment = new AccountFragment(this,AccountType.INCOME,isFromMainPage);
-		expenseFragment = new AccountFragment(this,AccountType.EXPENSE,isFromMainPage);
+		incomeFragment = new AccountFragment(this, AccountType.INCOME, isFromMainPage);
+		expenseFragment = new AccountFragment(this, AccountType.EXPENSE, isFromMainPage);
 
 		//ActionBar
-		actionBar = getActionBar();
+		actionBar = getSupportActionBar();
 		actionBar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
 		actionBar.setDisplayShowTitleEnabled(true);
 
@@ -69,22 +67,21 @@ public class AccountsTabActivity extends FragmentActivity implements AddNewAccou
 		viewPager.setAdapter(adapter);
 
 		//Tab Listener
-		ActionBar.TabListener tabListener = new TabListener() {
+		ActionBar.TabListener tabListener = new ActionBar.TabListener() {
 
 			@Override
-			public void onTabSelected(Tab tab, FragmentTransaction ft) {
+			public void onTabSelected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction ft) {
 				viewPager.setCurrentItem(tab.getPosition());
 			}
 
 			@Override
-			public void onTabUnselected(Tab tab, FragmentTransaction ft) {
-				// TODO Auto-generated method stub
+			public void onTabUnselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction ft) {
 
 			}
 
 			@Override
-			public void onTabReselected(Tab tab, FragmentTransaction ft) {
-				// TODO Auto-generated method stub	
+			public void onTabReselected(ActionBar.Tab tab, android.support.v4.app.FragmentTransaction ft) {
+
 			}
 		};
 

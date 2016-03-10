@@ -95,6 +95,7 @@
     <string name="filter_payday">מועד חיוב</string>
     <string name="filter_dates">תנועות בין תאריכים</string>
     <string name="accounts">חשבונות</string>
+    <string name="main">ראשי</string>
 
     <string-array name="default_pay_methods">
         <item>מזומן</item>
